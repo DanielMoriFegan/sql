@@ -54,7 +54,11 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+For the Customer_Address table which will retain changes, type 2 slowly changing dimension tables is required. For simiplicity, this table will be named customer_address_history. For the customer_address table that overwrites the previous address, we will want type 1 slowly changing dimension tables, and this will be called customer_address_current. 
+
+Customer_address_history will be a tyhpe 2 slwoly changing dimension table, as this table allows us to track the history of updates in our dimension records. Hence, when the customer changes their address, it will create a new record that will store the changed data, and leave the old address in tact. This allows us to track the historically signiicant attributes. Additionally, the old addresses will point to all history prior to the latest change, whilst the newest address maintains the most current information. Additionally this is achieved by both dating of the new and old record, where the old address is assigned a non-active effetive date, whilst the new record is assigned an active effective date. Whilst the new record is also provided with a new and unique surrogate key. 
+
+As for customer_address_current, we want to use a type 1 slowly changing dimension table, as this will overwrite the existing address with the new value coming in. This table will not maintain history, and due to this, will be the simplest and fastest way to load the customer address data. 
 ```
 
 ***
