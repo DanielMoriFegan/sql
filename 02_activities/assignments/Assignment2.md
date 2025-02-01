@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [X] Create a branch called `assignment-two`.
+- [X] Ensure that the repository is public.
+- [X] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [X] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -54,7 +54,11 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+For the Customer_Address table which will retain changes, type 2 slowly changing dimension tables is required. For simiplicity, this table will be named customer_address_history. For the customer_address table that overwrites the previous address, we will want type 1 slowly changing dimension tables, and this will be called customer_address_current. 
+
+Customer_address_history will be a type 2 slowly changing dimension table, as this table allows us to track the history of updates in our dimension records. Hence, when the customer changes their address, it will create a new record that will store the changed data, and leave the old address in tact. This allows us to track the historically signiicant attributes. Additionally, the old addresses will point to all history prior to the latest change, whilst the newest address maintains the most current information. Additionally this is achieved by both dating of the new and old record, where the old address is assigned a non-active effetive date, whilst the new record is assigned an active effective date. Whilst the new record is also provided with a new and unique surrogate key. 
+
+As for customer_address_current, we want to use a type 1 slowly changing dimension table, as this will overwrite the existing address with the new value coming in. This table will not maintain history, and due to this, will be the simplest and fastest way to load the customer address data. 
 ```
 
 ***
@@ -182,5 +186,15 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Here are some of the ethical issues highlighted in this post:
+
+The article revealed that behind the scenes of AI development, much of the work—such as tagging images for training datasets—is carried out by humans using platforms like Amazon Mechanical Turk, which is also commonly used in research. This raises ethical questions about worker recognition, working conditions, and compensation, especially considering that AI development relies on these unsung heroes without whom progress would not be possible. Similar concerns exist in academic research, as seen in the development of the WordNet database, where the labour of graduate students is left unmentioned. This issue ties into the growing importance of transparency, as AI systems, their creators, and contributors must remain accountable to maintain public trust. Unfortunately, the demand for cheap labour, constant changes, and a fast turnover rate are common threads among AI development, academic research, and the fast fashion industry.
+
+Beyond labour concerns, the creation of training datasets that rely on human judgment can introduce biases. These biases can affect AI performance and fairness, potentially leading to discrimination or unjust outcomes. As previously mentioned, due to the parallels between AI development and fast fashion—both of which prioritize high turnover rates—the likelihood of biases increases.
+
+Furthermore, the automation of tasks traditionally performed by humans has become a source of concern among workers, as it has significant implications for employment. This raises ethical questions about the responsibility of companies and society to support workers who may be displaced by automation. Although the article states that sewing automation is not yet possible, it is important to recognize improvements will be made over time. Rather than asking whether these tools can take over tasks currently performed by humans, we should be asking when they will do so and what we can do for the people who are negatively affected.
+
+Finally, it was also made clear that the collection and use of vast amounts of data for AI training can also raise privacy concerns. It is crucial to ensure that individuals' personal information is protected and used ethically. Additionally, questions arise regarding whether proper rights have been granted for the data used in training AI systems. As seen with AI-generated art programs, training datasets are often compiled from artists' work without their knowledge, leading to the reproduction of similar-looking art or outright appropriation of their creations. This raises not only privacy concerns but also issues regarding creator rights and data ownership.
+
+ 
 ```
