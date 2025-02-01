@@ -186,5 +186,15 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Here are some of the ethical issues highlighted in this post:
+
+The article revealed that behind the scenes of AI development, much of the work—such as tagging images for training datasets—is carried out by humans using platforms like Amazon Mechanical Turk, which is also commonly used in research. This raises ethical questions about worker recognition, working conditions, and compensation, especially considering that AI development relies on these unsung heroes without whom progress would not be possible. Similar concerns exist in academic research, as seen in the development of the WordNet database, where the labour of graduate students is left unmentioned. This issue ties into the growing importance of transparency, as AI systems, their creators, and contributors must remain accountable to maintain public trust. Unfortunately, the demand for cheap labour, constant changes, and a fast turnover rate are common threads among AI development, academic research, and the fast fashion industry.
+
+Beyond labour concerns, the creation of training datasets that rely on human judgment can introduce biases. These biases can affect AI performance and fairness, potentially leading to discrimination or unjust outcomes. As previously mentioned, due to the parallels between AI development and fast fashion—both of which prioritize high turnover rates—the likelihood of biases increases.
+
+Furthermore, the automation of tasks traditionally performed by humans has become a source of concern among workers, as it has significant implications for employment. This raises ethical questions about the responsibility of companies and society to support workers who may be displaced by automation. Although the article states that sewing automation is not yet possible, it is important to recognize improvements will be made over time. Rather than asking whether these tools can take over tasks currently performed by humans, we should be asking when they will do so and what we can do for the people who are negatively affected.
+
+Finally, it was also made clear that the collection and use of vast amounts of data for AI training can also raise privacy concerns. It is crucial to ensure that individuals' personal information is protected and used ethically. Additionally, questions arise regarding whether proper rights have been granted for the data used in training AI systems. As seen with AI-generated art programs, training datasets are often compiled from artists' work without their knowledge, leading to the reproduction of similar-looking art or outright appropriation of their creations. This raises not only privacy concerns but also issues regarding creator rights and data ownership.
+
+ 
 ```
